@@ -1,0 +1,53 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <div  fxLayout="column" fxFlex="40" fxFlex.gt-sm="100" fxFlexAlign="end center" style="padding-top:8%;">
+     <mat-card >
+       <mat-card-header>Login</mat-card-header>
+
+       <mat-card-content>
+           <form>
+            <div fxLayout="row wrap" fxLayoutAlign="start center" class="height-full form-wrap-row set-resp-space" fxLayoutGap.gt-md="15px">
+              <div class="input" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="start">
+                   <!--Username-->
+                    <input class="mrgn-t-none"  matInput placeholder="Email" type="email" formControlName="SSD"  required>
+                    <mat-icon class="icon">email</mat-icon>
+                  </div>
+                <div  class="input" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="start">
+                  <!--Password-->
+                   <input class="mrgn-t-none" matInput placeholder="Password" type="text" formControlName="SSD"  required>
+                 	<mat-icon class="icon">lock</mat-icon>
+                  </div>
+
+               <div fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
+                <!--Remember Password-->
+                  <section class="example-section">
+                    <mat-checkbox class="example-margin" ><span style="color:#6D6E70; font-size: 12px;">Remember me</span></mat-checkbox>
+                   </section>
+             </div>
+
+
+             <div class="Loginbtn" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
+             <button mat-raised-button><mat-icon>exit_to_app</mat-icon> Login </button>
+             </div>
+
+             <div class="FrogetPassword" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
+                 <a class="regularlink" (click)="openForgetPassword()" >Forget Password?</a>
+              </div>
+
+            </div>
+           </form>
+       </mat-card-content>
+
+       <mat-card-footer>
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="height-full form-wrap-row set-resp-space" fxLayoutGap.gt-md="15px" class = "cardfooter">
+          <div fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="space-between center">
+             <a class="regularlink"  [routerLink]="">Don't have an account?</a>
+            <a class="register"  [routerLink]="">Register Now</a>
+          </div>
+
+        </div>
+      </mat-card-footer>
+
+     </mat-card>
+  </div>
+  <div fxFlex="40%" fxFlexAlign="end center"></div>
+</div>
