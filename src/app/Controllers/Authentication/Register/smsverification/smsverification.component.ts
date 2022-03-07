@@ -6,10 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./smsverification.component.scss']
 })
 export class SMSVerificationComponent implements OnInit {
-
-  constructor() { }
+  timeLeft: number = 60;
+  interval : any;
+  constructor() {
+    this.startTimer()
+  }
 
   ngOnInit(): void {
+  }
+
+  startTimer() {
+    this.interval = setInterval(() => {
+      if(this.timeLeft > 0) {
+        this.timeLeft--;
+      } else {
+        this.timeLeft = 60;
+      }
+    },1000)
+  }
+
+  pauseTimer() {
+    clearInterval(this.interval);
   }
 
 }

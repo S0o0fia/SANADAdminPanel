@@ -28,7 +28,8 @@ import { SocialInfoFormComponent } from './Pages/Register/social-info-form/socia
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { SMSVerificationComponent } from './Controllers/Authentication/Register/smsverification/smsverification.component';
 import { BankInfoComponent } from './Controllers/Authentication/Register/bank-info/bank-info.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OwnerInfoComponent } from './Controllers/Authentication/Register/owner-info/owner-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SocialInfoFormComponent,
     SMSVerificationComponent,
     BankInfoComponent,
+    OwnerInfoComponent,
 
 
   ],
@@ -58,6 +60,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     MatInputModule,
+    FormsModule,
     MatDialogModule,
     MatSelectModule,
     MatDatepickerModule,

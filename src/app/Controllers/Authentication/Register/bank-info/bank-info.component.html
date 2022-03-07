@@ -1,14 +1,14 @@
 <div fxLayout="row" fxLayoutAlign="space-between center">
   <div  fxLayout="column" fxFlex="40" fxFlex.gt-sm="100" fxFlexAlign="end center" style="padding-top:8%;">
-     <mat-card  >
+     <mat-card  style="overflow-y: scroll; overflow-x: hidden;">
        <mat-card-header>Bank Info</mat-card-header>
 
-       <mat-card-content>
-        <div [formGroup]="form">
+       <mat-card-content >
+        <div [formGroup]="orderForm">
           <div formArrayName="items"
-            *ngFor="let item of Controls; let i = index;">
-
-       <div [formGroupName]="i">
+            *ngFor="let item of orderForm.get('items').controls; let i = index;">
+            <div [formGroupName]="i">
+             <h3>Bank No. #{{i+1}}</h3>
             <!--Country-->
              <div fxLayout="column">
               <div fxLayout="row wrap" fxLayoutAlign="start space-between"  fxLayout.xs="column">
@@ -115,9 +115,16 @@
            </div>
           </div>
 
+          <hr/>
+        </div>
+        </div>
+        </div>
 
-        </div>
-        </div>
+         <!--Save and Next-->
+         <div fxLayout="column">
+          <div class="Loginbtn" fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="end">
+            <button mat-raised-button (click)="addItem()"><mat-icon>add_to_library</mat-icon> Add Bank </button>
+          </div>
         </div>
 
              <!--Save and Next-->

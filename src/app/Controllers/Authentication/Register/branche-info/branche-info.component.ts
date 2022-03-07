@@ -19,7 +19,7 @@ export class BrancheInfoComponent implements OnInit {
   Next()
   {
     const dialogRef = this.dialog.open(BankInfoComponent, {
-      width: '80%',
+      width: '100%',
       position : {top :'-6%' , left:'25%'}
     });
 
