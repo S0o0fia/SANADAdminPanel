@@ -1,0 +1,53 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <div  fxLayout="column" fxFlex="40" fxFlex.gt-sm="100" fxFlexAlign="end center" style="padding-top:8%;">
+     <mat-card >
+       <mat-card-header>Branche Info</mat-card-header>
+       <mat-card-content>
+        <cdk-accordion class="example-accordion">
+          <cdk-accordion-item
+            *ngFor="let item of items; let index = index;"
+            #accordionItem="cdkAccordionItem"
+            class="example-accordion-item"
+            role="button"
+            tabindex="0"
+            [attr.id]="'accordion-header-' + index"
+            [attr.aria-expanded]="accordionItem.expanded"
+            [attr.aria-controls]="'accordion-body-' + index">
+            <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+              {{ item }}
+              <span class="example-accordion-item-description">
+                <mat-icon>{{ accordionItem.expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+              </span>
+            </div>
+            <div
+              class="example-accordion-item-body"
+              role="region"
+              [style.display]="accordionItem.expanded ? '' : 'none'"
+              [attr.id]="'accordion-body-' + index"
+              [attr.aria-labelledby]="'accordion-header-' + index">
+               <div *ngIf="index == 0" class="form">
+                  <app-branche-info-form></app-branche-info-form>
+               </div>
+               <div *ngIf="index == 1"  class="form">
+                  <app-business-info-form></app-business-info-form>
+              </div>
+              <div *ngIf="index == 2"  class="form">
+                 <app-home-info-form></app-home-info-form>
+              </div>
+              <div *ngIf="index == 3"  class="form">
+                <app-social-info-form></app-social-info-form>
+              </div>
+            </div>
+          </cdk-accordion-item>
+        </cdk-accordion>
+          <!--Save and Next-->
+          <div fxLayout="column">
+            <div class="Loginbtn" fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
+              <button mat-raised-button (click)="Next()"><mat-icon>exit_to_app</mat-icon> Save and Next </button>
+            </div>
+          </div>
+       </mat-card-content>
+     </mat-card>
+  </div>
+  <div fxFlex="40%" fxFlexAlign="end center"></div>
+</div>

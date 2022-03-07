@@ -12,25 +12,59 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ForgetPasswordComponent } from './Controllers/Authentication/forget-password/forget-password.component';
-
+import { GeneralInfoComponent } from './Controllers/Authentication/Register/general-info/general-info.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { LicenceInfoComponent } from './Controllers/Authentication/Register/licence-info/licence-info.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { AggrementInfoComponent } from './Controllers/Authentication/Register/aggrement-info/aggrement-info.component';
+import { BrancheInfoComponent } from './Controllers/Authentication/Register/branche-info/branche-info.component';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { BrancheInfoFormComponent } from './Pages/Register/branche-info-form/branche-info-form.component';
+import { BusinessInfoFormComponent } from './Pages/Register/business-info-form/business-info-form.component';
+import { HomeInfoFormComponent } from './Pages/Register/home-info-form/home-info-form.component';
+import { SocialInfoFormComponent } from './Pages/Register/social-info-form/social-info-form.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { SMSVerificationComponent } from './Controllers/Authentication/Register/smsverification/smsverification.component';
+import { BankInfoComponent } from './Controllers/Authentication/Register/bank-info/bank-info.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    GeneralInfoComponent,
+    LicenceInfoComponent,
+    AggrementInfoComponent,
+    BrancheInfoComponent,
+    BrancheInfoFormComponent,
+    BusinessInfoFormComponent,
+    HomeInfoFormComponent,
+    SocialInfoFormComponent,
+    SMSVerificationComponent,
+    BankInfoComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MatCardModule,
     MatFormFieldModule,
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    CdkAccordionModule,
+    ScrollingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

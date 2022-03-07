@@ -1,19 +1,19 @@
 <div fxLayout="row" fxLayoutAlign="space-between center">
-  <div  fxLayout="column" fxFlex="40" fxFlex.gt-sm="100" fxFlexAlign="end center" style="padding-top:8%;">
+  <div  fxLayout="column" fxFlex="100" fxFlex.gt-sm="100" fxFlexAlign="end center" style="padding-top:6%;">
      <mat-card >
        <mat-card-header>Login</mat-card-header>
 
        <mat-card-content>
            <form>
             <div fxLayout="row wrap" fxLayoutAlign="start center" class="height-full form-wrap-row set-resp-space" fxLayoutGap.gt-md="15px">
-              <div class="input" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="start">
+              <div class="input" fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="start">
                    <!--Username-->
-                    <input class="mrgn-t-none"  matInput placeholder="Email" type="email" formControlName="SSD"  required>
+                    <input class="mrgn-t-none"  matInput placeholder="Email" type="email"  required>
                     <mat-icon class="icon">email</mat-icon>
                   </div>
-                <div  class="input" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="start">
+                <div  class="input" fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="start">
                   <!--Password-->
-                   <input class="mrgn-t-none" matInput placeholder="Password" type="text" formControlName="SSD"  required>
+                   <input class="mrgn-t-none" matInput placeholder="Password" type="password"  required>
                  	<mat-icon class="icon">lock</mat-icon>
                   </div>
 
@@ -25,11 +25,11 @@
              </div>
 
 
-             <div class="Loginbtn" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
+             <div class="Loginbtn" fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
              <button mat-raised-button><mat-icon>exit_to_app</mat-icon> Login </button>
              </div>
 
-             <div class="FrogetPassword" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
+             <div class="FrogetPassword" fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
                  <a class="regularlink" (click)="openForgetPassword()" >Forget Password?</a>
               </div>
 
@@ -38,11 +38,14 @@
        </mat-card-content>
 
        <mat-card-footer>
-        <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="height-full form-wrap-row set-resp-space" fxLayoutGap.gt-md="15px" class = "cardfooter">
-          <div fxLayout="column" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="space-between center">
-             <a class="regularlink"  [routerLink]="">Don't have an account?</a>
-            <a class="register"  [routerLink]="">Register Now</a>
-          </div>
+        <div fxLayout="row" class = "cardfooter">
+          <div fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="49" fxFlex.lg="49" fxFlex.xl="49" fxLayoutAlign="end">
+             <a class="regularlink">Don't have an account?</a>
+         </div>
+         <div fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="49" fxFlex.lg="49" fxFlex.xl="49" fxLayoutAlign="start">
+       <a class="register" (click)="openRegister()" >Register Now</a>
+      </div>
+
 
         </div>
       </mat-card-footer>

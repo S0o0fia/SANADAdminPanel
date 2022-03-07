@@ -1,0 +1,122 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <div  fxLayout="column" fxFlex="40" fxFlex.gt-sm="100" fxFlexAlign="end center" style="padding-top:8%;">
+     <mat-card >
+       <mat-card-header>Licence Info</mat-card-header>
+       <mat-card-content>
+           <form>
+            <!--Country-->
+            <div fxLayout="column">
+              <div fxLayout="row wrap" fxLayoutAlign="start space-between"  fxLayout.xs="column">
+                <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" fxFlex="100" fxFlex.gt-md="30">
+                  <mat-label>Country</mat-label>
+                </div>
+
+                <div fxFlex.gt-sm="69" fxFlex.gt-xs="69" fxFlex="100" fxFlex.gt-md="69">
+                  <mat-select>
+                       <mat-option>topping</mat-option>
+                  </mat-select>
+                </div>
+             </div>
+            </div>
+
+           <!--City-->
+           <div fxLayout="column">
+            <div fxLayout="row wrap" fxLayoutAlign="start space-between"  fxLayout.xs="column">
+              <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" fxFlex="100" fxFlex.gt-md="30">
+                <mat-label>City</mat-label>
+              </div>
+
+              <div fxFlex.gt-sm="69" fxFlex.gt-xs="69" fxFlex="100" fxFlex.gt-md="69">
+                <mat-select>
+                     <mat-option>topping</mat-option>
+                </mat-select>
+              </div>
+           </div>
+          </div>
+
+             <!--Start Date-->
+             <div fxLayout="column">
+              <div fxLayout="row wrap" fxLayoutAlign="start space-between"  fxLayout.xs="column">
+                <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" fxFlex="100" fxFlex.gt-md="30">
+                  <mat-label>Start Date</mat-label>
+                </div>
+
+                <div fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100" fxFlex.gt-md="70">
+                  <input matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </div>
+             </div>
+            </div>
+
+               <!--Licence Number-->
+               <div fxLayout="column">
+                <div fxLayout="row wrap" fxLayoutAlign="start space-between"  fxLayout.xs="column">
+                  <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" fxFlex="100" fxFlex.gt-md="30">
+                    <mat-label>Licence Number</mat-label>
+                  </div>
+
+                  <div fxFlex.gt-sm="69" fxFlex.gt-xs="69" fxFlex="100" fxFlex.gt-md="69">
+                    <input class="mrgn-t-none"  matInput placeholder="Licence Number" type="text"  required>
+
+                  </div>
+               </div>
+              </div>
+
+              <!--Activity Type-->
+              <div fxLayout="column">
+                <div fxLayout="row wrap" fxLayoutAlign="start space-between"  fxLayout.xs="column">
+                  <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" fxFlex="100" fxFlex.gt-md="30">
+                    <mat-label>Activity Type</mat-label>
+                  </div>
+
+                  <div fxFlex.gt-sm="69" fxFlex.gt-xs="69" fxFlex="100" fxFlex.gt-md="69">
+                    <mat-select>
+                      <mat-option>topping</mat-option>
+                    </mat-select>
+                  </div>
+               </div>
+              </div>
+
+             <!--Establishment Type-->
+            <div fxLayout="column">
+              <div fxLayout="row wrap" fxLayoutAlign="start space-between"  fxLayout.xs="column">
+                <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" fxFlex="100" fxFlex.gt-md="30">
+                  <mat-label>Establishment Type</mat-label>
+                </div>
+
+                <div fxFlex.gt-sm="69" fxFlex.gt-xs="69" fxFlex="100" fxFlex.gt-md="69">
+                  <mat-select>
+                    <mat-option>topping</mat-option>
+                  </mat-select>
+                </div>
+            </div>
+            </div>
+
+
+               <!--Upload Licence Copy-->
+               <div fxLayout="column">
+                <div fxLayout="row wrap" fxLayoutAlign="start space-between"  fxLayout.xs="column">
+                  <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" fxFlex="100" fxFlex.gt-md="30">
+                    <mat-label>Upload Licence Copy</mat-label>
+                  </div>
+
+                  <div fxFlex.gt-sm="69" fxFlex.gt-xs="69" fxFlex="100" fxFlex.gt-md="69">
+                    <input class="mrgn-t-none"  type="file"  required>
+                  </div>
+
+               </div>
+              </div>
+
+
+
+           </form>
+           <!--Save and Next-->
+           <div fxLayout="column">
+            <div class="Loginbtn" fxLayout="row" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="center">
+              <button mat-raised-button (click)="Next()"><mat-icon>exit_to_app</mat-icon> Save and Next </button>
+            </div>
+          </div>
+       </mat-card-content>
+     </mat-card>
+  </div>

@@ -1,3 +1,4 @@
+import { GeneralInfoComponent } from './../Register/general-info/general-info.component';
 import { ForgetPasswordComponent } from './../forget-password/forget-password.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -18,11 +19,22 @@ export class LoginComponent implements OnInit {
 
   openForgetPassword(): void {
     const dialogRef = this.dialog.open(ForgetPasswordComponent, {
-      width: '25%',
-      position: { left:'11%', top:'11%' },
+      width: '40%',
+      position: { left:'6.5%', top:'10%' },
 
     });
 
+
+  }
+
+  openRegister()
+  {
+    this.dialog.closeAll();
+     this.dialog.open(GeneralInfoComponent, {
+      width: '50%',
+      position: { left:'25%', top:'-3%' },
+
+    });
 
   }
 }
